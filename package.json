@@ -1,0 +1,29 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "A social network API using a NoSQL database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennnmarshall/social-network-api.git"
+  },
+  "keywords": [
+    "social-network-api"
+  ],
+  "author": "Jenn Marshall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jennnmarshall/social-network-api/issues"
+  },
+  "homepage": "https://github.com/jennnmarshall/social-network-api#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.8.3",
+    "nodemon": "^2.0.20"
+  }
+}

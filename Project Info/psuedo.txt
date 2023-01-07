@@ -1,0 +1,24 @@
+Models - 
+
+Index
+User
+Thoughts
+Reactions
+
+Routes - 
+
+Users:
+GET - all users, user by ID
+POST - create user, add friend
+PUT - Update user
+DELETE - delete user, delete friends
+
+Thoughts:
+GET - get all thoughts, get single thoughts
+POST - create thoughts
+PUT - update thoughts
+DELETE - delete thoughts
+
+Reactions:
+POST - create Reactions
+DELETE - delete reaction 
