@@ -22,3 +22,10 @@ DELETE - delete thoughts
 Reactions:
 POST - create Reactions
 DELETE - delete reaction 
+
+Models
+controllers
+Routes
+
+Timestamp??
+>> moment
