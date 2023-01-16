@@ -1,8 +1,8 @@
-const ReactionsSchema = require('./Reaction');
+const reactionSchema = require('./Reaction');
 const { Schema, model } = require("mongoose");
 const moment = require("moment");
 
-const ThoughtsSchema = new Schema(
+const thoughtsSchema = new Schema(
   {
     thoughtText: {
       type: String,
@@ -13,7 +13,7 @@ const ThoughtsSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      // Moment
+
       get: (createdAtVal) =>
         moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
     },
@@ -21,8 +21,8 @@ const ThoughtsSchema = new Schema(
       type: String,
       required: true,
     },
-    // Use ReactionsSchema to validate data
-    reactions: [ReactionsSchema],
+
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
@@ -33,13 +33,11 @@ const ThoughtsSchema = new Schema(
   }
 );
 
-// get total count of reactions
-ThoughtsSchema.virtual("reactionCount").get(function () {
+// creates a virtual that returns the number of reactions per thought
+thoughtsSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
-// create the Thoughts model using the Thoughts Schema
-const Thoughts = model("Thoughts", ThoughtsSchema);
+const Thoughts = model("Thoughts", thoughtsSchema);
 
-// Export Thoughts Module
 module.exports = Thoughts;
